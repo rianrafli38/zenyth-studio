@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'preact/hooks';
-import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Navbar.module.css';
 
 function Navbar() {
@@ -18,15 +17,18 @@ function Navbar() {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false); // Tutup menu setelah klik
+      setMenuOpen(false); // Tutup menu saat navigasi
     }
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>Zenyth ⚡</div>
 
-      {/* Menu besar (desktop) */}
       <ul className={styles.navLinks}>
         <li onClick={() => scrollToSection('services')}>Our Services</li>
         <li onClick={() => scrollToSection('portfolio')}>Portfolio</li>
@@ -34,30 +36,20 @@ function Navbar() {
         <li onClick={() => scrollToSection('contact')}>Contact</li>
       </ul>
 
-      {/* Hamburger button */}
-      <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+      <div className={styles.hamburger} onClick={toggleMenu}>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
       </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.ul
-            className={styles.mobileMenu}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <li onClick={() => scrollToSection('services')}>Our Services</li>
-            <li onClick={() => scrollToSection('portfolio')}>Portfolio</li>
-            <li onClick={() => scrollToSection('about')}>About</li>
-            <li onClick={() => scrollToSection('contact')}>Contact</li>
-          </motion.ul>
-        )}
-      </AnimatePresence>
+      {menuOpen && (
+        <ul className={styles.mobileMenu}>
+          <li onClick={() => scrollToSection('services')}>Our Services</li>
+          <li onClick={() => scrollToSection('portfolio')}>Portfolio</li>
+          <li onClick={() => scrollToSection('about')}>About</li>
+          <li onClick={() => scrollToSection('contact')}>Contact</li>
+        </ul>
+      )}
     </nav>
   );
 }
