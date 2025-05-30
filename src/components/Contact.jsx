@@ -31,11 +31,11 @@ function Contact() {
         if (data?.errors) {
           alert(data.errors.map((err) => err.message).join('\n'));
         } else {
-          alert('Gagal mengirim pesan. Silakan coba lagi.');
+          alert('Failed to send message. Please try again.');
         }
       }
     } catch (error) {
-      alert('Terjadi kesalahan koneksi. Silakan coba lagi.');
+      alert('A connection error occurred. Please try again.');
     } finally {
       setSending(false);
     }
@@ -48,16 +48,16 @@ function Contact() {
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ amount: 0.2 }}
     >
       <motion.h2
         className={styles.sectionTitle}
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ amount: 0.3 }}
       >
-        Hubungi Kami
+        Contact Us
       </motion.h2>
 
       <motion.form
@@ -66,32 +66,32 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ amount: 0.3 }}
       >
         <input
           type="text"
           name="name"
-          placeholder="Nama Anda"
+          placeholder="Your Name"
           className={styles.input}
           required
         />
         <input
           type="email"
           name="email"
-          placeholder="Email Anda"
+          placeholder="Your Email"
           className={styles.input}
           required
         />
         <textarea
           name="message"
-          placeholder="Pesan Anda"
+          placeholder="Your Message"
           rows="5"
           className={styles.textarea}
           required
         ></textarea>
 
         <button type="submit" className={styles.button} disabled={sending}>
-          {sending ? 'Mengirim...' : 'Kirim Pesan'}
+          {sending ? 'Sending...' : 'Send Message'}
         </button>
       </motion.form>
 
@@ -100,7 +100,7 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ amount: 0.3 }}
       >
         <a
           href="https://wa.me/6285174380251"

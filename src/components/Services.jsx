@@ -4,15 +4,15 @@ import styles from './Services.module.css';
 const services = [
   {
     title: 'Website Development',
-    desc: 'Landing Page, Company Profile, Dashboard Bisnis. Custom atau template siap pakai.'
+    desc: 'Landing Page, Company Profile, Business Dashboard. Custom or ready-to-use templates.'
   },
   {
     title: 'AI Chatbot',
-    desc: 'Chatbot cerdas dengan Gemini/OpenAI API. Multi-platform dan adaptif untuk bisnis Anda.'
+    desc: 'Intelligent chatbot with Gemini/OpenAI API. Multi-platform and adaptive for your business.'
   },
   {
     title: 'Digital Support',
-    desc: 'SEO, Konsultasi Branding, dan Maintenance. Kami bantu Anda tumbuh dengan arah yang tepat.'
+    desc: 'SEO, Branding Consultation, and Maintenance. We help you grow in the right direction.'
   }
 ];
 
@@ -33,7 +33,7 @@ function Services() {
         transition={{ duration: 0.6 }}
         viewport={{ amount: 0.3 }}
       >
-        Layanan Kami
+        Our Services
       </motion.h2>
 
       <div className={styles.cardContainer}>
@@ -44,7 +44,7 @@ function Services() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.3, duration: 0.5 }}
-            viewport={{ amount: 0.3, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
           >
             <h3 className={styles.cardTitle}>{service.title}</h3>
             <p className={styles.cardDesc}>{service.desc}</p>

@@ -5,17 +5,17 @@ import { link } from 'framer-motion/client';
 const portfolioItems = [
   {
     title: 'Auraskin',
-    desc: 'Sistem pemesanan produk skincare online dengan dashboard admin dinamis dan manajemen pesanan.',
-    link: 'https://auraskin.my.id'
+    desc: 'Online skincare product ordering system with dynamic admin dashboard and order management.',
+    link: 'https://en.auraskin.my.id'
   },
   {
     title: 'Luna Miel',
-    desc: 'Website branding untuk produk waffle rumahan dengan desain minimalis dan elegan.' ,
+    desc: 'Branding website for home waffle products with minimalist and elegant design.' ,
     link: 'https://lunaamiel.netlify.app/'
   },
   {
     title: 'AI Chatbot',
-    desc: 'Chatbot pintar dengan API Gemini dan OpenAI, siap membantu bisnis dengan layanan cerdas.'
+    desc: 'Smart chatbot with Gemini API and OpenAI, ready to help businesses with intelligent services.'
   }
 ];
 
@@ -29,7 +29,7 @@ function Portfolio() {
         transition={{ duration: 0.5 }}
         viewport={{ amount: 0.3 }}
       >
-        Portfolio Kami
+        Our Portfolio
       </motion.h2>
 
       <div className={styles.projectGrid}>
@@ -51,7 +51,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Lihat Website
+                View Website
               </a>
             )}
           </motion.div>

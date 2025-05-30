@@ -9,11 +9,11 @@ function ThankYou() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className={styles.message}>Terima Kasih 🙏</h1>
+      <h1 className={styles.message}>Thank You!</h1>
       <p className={styles.detail}>
-        Pesanmu telah berhasil kami terima. Tim Zenyth Studio akan segera menghubungi Anda.
+        Your message has been successfully received. Zenyth Studio Team will contact you soon.
       </p>
-      <a href="/" className={styles.backButton}>Kembali ke Beranda</a>
+      <a href="/" className={styles.backButton}>Back to home</a>
     </motion.div>
   );
 }

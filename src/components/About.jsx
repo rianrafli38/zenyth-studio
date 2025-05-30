@@ -15,14 +15,14 @@ function About() {
         transition={{ duration: 0.8 }}
         viewport={{ amount: 0.3 }}
       >
-        <h2 className={styles.sectionTitle}>Tentang Zenyth Studio</h2>
+        <h2 className={styles.sectionTitle}>About Zenyth Studio</h2>
         <p className={styles.content}>
-          <span className={styles.highlight}>Zenyth Studio</span> adalah ruang digital tempat kami membangun lebih dari sekadar kode.
-          Dengan semangat <span className={styles.highlight}>“More Than A Code”</span>, kami menciptakan pengalaman digital yang menyatu antara teknologi, estetika, dan makna.
+          <span className={styles.highlight}>Zenyth Studio</span> is a digital space where we build more than just code.
+With the spirit of <span className={styles.highlight}>“More Than A Code”</span>, we create digital experiences that blend technology, aesthetics, and meaning.
           <br /><br />
-          Kami menghadirkan solusi web dan sistem cerdas yang tidak hanya berfungsi, tapi juga berbicara—mewakili karakter dan visi setiap klien.
+          We deliver intelligent web solutions and systems that not only work, but speak—representing each clients character and vision.
           <br /><br />
-          Zenyth Studio bukan agensi biasa. Kami adalah rekan transformasi digital, yang siap berjalan bersama Anda membangun masa depan yang lebih terarah, kuat, dan bernilai.
+          Zenyth Studio is not an ordinary agency. We are a digital transformation partner, ready to walk with you to build a more focused, powerful, and valuable future.
         </p>
       </motion.div>
     </section>
