@@ -11,7 +11,7 @@ const portfolioItems = [
   {
     title: 'Luna Miel',
     desc: 'Website branding untuk produk waffle rumahan dengan desain minimalis dan elegan.' ,
-    link: 'https://glittery-tiramisu-b834d1.netlify.app/'
+    link: 'https://lunaamiel.netlify.app/'
   },
   {
     title: 'AI Chatbot',
@@ -40,7 +40,7 @@ function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
-            viewport={{ amount: 0.3, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
           >
             <h3 className={styles.projectTitle}>{item.title}</h3>
             <p className={styles.projectDesc}>{item.desc}</p>
