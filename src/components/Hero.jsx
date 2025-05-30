@@ -15,7 +15,7 @@ function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        Zenyth Studio ⚡️
+        <span className={styles.inline}>Zenyth Studio ⚡️</span>
       </motion.h1>
 
       <motion.p
