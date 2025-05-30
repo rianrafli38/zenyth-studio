@@ -13,7 +13,7 @@ function About() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ amount: 0.3, amount: 0.3 }}
+        viewport={{ amount: 0.3 }}
       >
         <h2 className={styles.sectionTitle}>Tentang Zenyth Studio</h2>
         <p className={styles.content}>
