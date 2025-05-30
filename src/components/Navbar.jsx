@@ -27,7 +27,13 @@ function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.logo}>Zenyth ⚡</div>
+      <div
+        className={styles.logo}
+        onClick={() => scrollToSection('hero')} // kembali ke hero
+        style={{ cursor: 'pointer' }}
+      >
+        Zenyth ⚡
+      </div>
 
       <ul className={styles.navLinks}>
         <li onClick={() => scrollToSection('services')}>Our Services</li>

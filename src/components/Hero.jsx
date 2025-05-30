@@ -2,8 +2,16 @@ import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
 function Hero() {
+  const scrollToContact = () => {
+    const section = document.getElementById('contact');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.section
+      id="hero"
       className={styles.hero}
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -30,6 +38,7 @@ function Hero() {
 
       <motion.button
         className={styles.ctaButton}
+        onClick={scrollToContact}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: 'spring', stiffness: 300 }}
