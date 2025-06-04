@@ -1,16 +1,8 @@
-import { Link } from 'wouter';
 import styles from './PhotographerPage.module.css';
 
 function PhotographerPage() {
   return (
     <div className={styles.container}>
-      {/* 🔙 Back to Home */}
-      <div className={styles.backHome}>
-        <Link href="/">
-          <a className={styles.backLink}>← Back to Home</a>
-        </Link>
-      </div>
-
       {/* 🖼️ Hero Section */}
       <h1 className={styles.title}>📸 Photographer & Videographer Web Service</h1>
       <p className={styles.subtitle}>
@@ -54,17 +46,6 @@ function PhotographerPage() {
           Book Free Consultation
         </a>
       </section>
-
-      {/* 🔗 Navigation Buttons to Main Sections */}
-      <div className={styles.sectionNav}>
-        <p>Explore other sections:</p>
-        <div className={styles.navButtonGroup}>
-          <Link href="/#services"><a className={styles.button}>Services</a></Link>
-          <Link href="/#portfolio"><a className={styles.button}>Portfolio</a></Link>
-          <Link href="/#about"><a className={styles.button}>About</a></Link>
-          <Link href="/#contact"><a className={styles.button}>Contact</a></Link>
-        </div>
-      </div>
     </div>
   );
 }
