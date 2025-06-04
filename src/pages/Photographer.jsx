@@ -1,4 +1,4 @@
-import styles from './PhotographerPage.module.css';
+import styles from './Photographer.module.css';
 
 function PhotographerPage() { return ( <div className={styles.photographerPage}> <section className={styles.hero}> <h1>📸 Photographer & Videographer Web Service</h1> <p>Meningkatkan visibilitas dan daya tarik portofolio Anda secara profesional dan elegan.</p> </section>
 
