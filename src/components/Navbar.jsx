@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
+import { Link } from 'wouter';
 import styles from './Navbar.module.css';
 
 function Navbar() {
@@ -17,7 +18,7 @@ function Navbar() {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false); // Tutup menu saat navigasi
+      setMenuOpen(false);
     }
   };
 
@@ -29,7 +30,7 @@ function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div
         className={styles.logo}
-        onClick={() => scrollToSection('hero')} // kembali ke hero
+        onClick={() => scrollToSection('hero')}
         style={{ cursor: 'pointer' }}
       >
         Zenyth ⚡
@@ -40,6 +41,11 @@ function Navbar() {
         <li onClick={() => scrollToSection('portfolio')}>Portfolio</li>
         <li onClick={() => scrollToSection('about')}>About</li>
         <li onClick={() => scrollToSection('contact')}>Contact</li>
+        <li>
+          <Link href="/photographer">
+            <a className={styles.link}>📸 Photographer</a>
+          </Link>
+        </li>
       </ul>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
@@ -54,6 +60,11 @@ function Navbar() {
           <li onClick={() => scrollToSection('portfolio')}>Portfolio</li>
           <li onClick={() => scrollToSection('about')}>About</li>
           <li onClick={() => scrollToSection('contact')}>Contact</li>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/photographer">
+              <a className={styles.link}>📸 Photographer</a>
+            </Link>
+          </li>
         </ul>
       )}
     </nav>

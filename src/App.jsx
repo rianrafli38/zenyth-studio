@@ -1,20 +1,30 @@
+import { Route, Switch } from "wouter";
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
+
+// Import halaman khusus fotografer & videografer
+import PhotographerPage from './pages/PhotographerPage';
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <About />
-      <Contact />
-    </div>
+      <Switch>
+        <Route path="/">
+          <Hero />
+          <Services />
+          <Portfolio />
+          <About />
+          <Contact />
+        </Route>
+
+        <Route path="/photographer" component={PhotographerPage} />
+      </Switch>
+    </>
   );
 }
 

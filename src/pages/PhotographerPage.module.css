@@ -1,0 +1,69 @@
+.container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+  border-left: 4px solid #4b6cb7;
+  padding-left: 0.75rem;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #4b6cb7;
+  font-weight: 500;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.galleryItem {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.03);
+}
+
+.galleryImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
