@@ -1,12 +1,6 @@
 import { Route, Switch } from "wouter";
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import About from './components/About';
-import Contact from './components/Contact';
-
-// Import halaman khusus fotografer & videografer
+import ScrollTo from './pages/ScrollTo';
 import PhotographerPage from './pages/PhotographerPage';
 
 function App() {
@@ -14,14 +8,12 @@ function App() {
     <>
       <Navbar />
       <Switch>
+        {/* Halaman utama */}
         <Route path="/">
-          <Hero />
-          <Services />
-          <Portfolio />
-          <About />
-          <Contact />
+          <ScrollTo />
         </Route>
 
+        {/* Halaman khusus fotografer & videografer */}
         <Route path="/photographer" component={PhotographerPage} />
       </Switch>
     </>

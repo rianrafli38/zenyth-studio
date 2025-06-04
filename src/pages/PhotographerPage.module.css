@@ -59,3 +59,27 @@
 .button:hover {
   background-color: #3b57a3;
 }
+
+.backHome {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  color: #4b6cb7;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.sectionNav {
+  margin-top: 3rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.navButtonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}

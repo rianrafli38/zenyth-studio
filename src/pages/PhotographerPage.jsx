@@ -4,20 +4,20 @@ import styles from './PhotographerPage.module.css';
 function PhotographerPage() {
   return (
     <div className={styles.container}>
-      {/* Back to Home */}
-      <div style={{ marginBottom: '2rem' }}>
+      {/* 🔙 Back to Home */}
+      <div className={styles.backHome}>
         <Link href="/">
-          <a style={{ color: '#4b6cb7', textDecoration: 'underline', fontWeight: '500' }}>
-            ← Back to Home
-          </a>
+          <a className={styles.backLink}>← Back to Home</a>
         </Link>
       </div>
 
+      {/* 🖼️ Hero Section */}
       <h1 className={styles.title}>📸 Photographer & Videographer Web Service</h1>
       <p className={styles.subtitle}>
         Elevate your portfolio's visibility and appeal with professional and elegant design.
       </p>
 
+      {/* 📁 Features */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>🖼️ Elegant Portfolio</h2>
         <p className={styles.text}>
@@ -39,6 +39,7 @@ function PhotographerPage() {
         </p>
       </section>
 
+      {/* 📞 CTA */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Showcase your talent on the digital stage</h2>
         <p className={styles.text}>
@@ -54,10 +55,10 @@ function PhotographerPage() {
         </a>
       </section>
 
-      {/* Navigate to Home Sections */}
-      <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <p style={{ marginBottom: '1rem' }}>Explore other sections:</p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
+      {/* 🔗 Navigation Buttons to Main Sections */}
+      <div className={styles.sectionNav}>
+        <p>Explore other sections:</p>
+        <div className={styles.navButtonGroup}>
           <Link href="/#services"><a className={styles.button}>Services</a></Link>
           <Link href="/#portfolio"><a className={styles.button}>Portfolio</a></Link>
           <Link href="/#about"><a className={styles.button}>About</a></Link>
