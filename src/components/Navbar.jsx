@@ -61,7 +61,7 @@ function Navbar() {
         }}
         style={{ cursor: 'pointer' }}
       >
-        Zenyth ⚡
+        Zenyth
       </div>
 
       <ul className={styles.navLinks}>
