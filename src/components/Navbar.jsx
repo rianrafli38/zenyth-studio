@@ -71,7 +71,7 @@ function Navbar() {
         {navLink('Contact', 'contact')}
         <li>
           <Link href="/photographer">
-            <a className={styles.link}>📸 Photographer</a>
+            <a className={styles.link}>Photographer</a>
           </Link>
         </li>
       </ul>
@@ -90,7 +90,7 @@ function Navbar() {
           {navLink('Contact', 'contact')}
           <li onClick={() => setMenuOpen(false)}>
             <Link href="/photographer">
-              <a className={styles.link}>📸 Photographer</a>
+              <a className={styles.link}>Photographer</a>
             </Link>
           </li>
         </ul>
